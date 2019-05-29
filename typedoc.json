@@ -1,0 +1,8 @@
+{
+  "includeDeclarations": true,
+  "excludeExternals": true,
+  "target": "es6",
+  "mode": "file",
+  "out": "docs",
+  "theme": "minimal"
+}

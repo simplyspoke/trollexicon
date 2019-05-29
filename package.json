@@ -1,0 +1,58 @@
+{
+  "name": "trollexicon",
+  "version": "0.0.1",
+  "description": "A repository of language, for clarity purposes.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "typedoc --options typedoc.json src",
+    "commit": "git-cz",
+    "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "precommit": "lint-staged",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "prettier --write --single-quote",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    },
+    "validate-commit-msg": {
+      "types": "conventional-commit-types",
+      "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simplyspoke/trollexicon.git"
+  },
+  "keywords": [
+    "Lexicon",
+    "Typescript",
+    "Amazing"
+  ],
+  "author": "Tristan Fitzgerald",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simplyspoke/trollexicon/issues"
+  },
+  "homepage": "https://github.com/simplyspoke/trollexicon#readme",
+  "devDependencies": {
+    "fs-extra": "^8.0.1",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "prettier": "^1.17.1",
+    "shelljs": "^0.8.3",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "typedoc": "^0.14.2",
+    "typescript": "^3.4.5",
+    "url": "^0.11.0",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "dependencies": {}
+}
